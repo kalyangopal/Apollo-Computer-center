@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Details Entry</title>
+
+    <!-- SheetJS for Excel Export -->
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Apollo Computer Education</h1>
+    <h2>Student Details Entry</h2>
+
+    <div class="label"><label>Student Name:</label><br>
+    <input type="text" id="name" placeholder="Enter student name"><br><br>
+
+    <label>Courses:</label><br>
+    <input type="text" id="courses" placeholder="Enter Course"><br><br>
+
+    <label>Mobile Number:</label><br>
+    <input type="text" id="mobileNumber" placeholder="Enter Mobile Number"><br><br>
+
+    <label>Joining Date:</label><br>
+    <input type="date" id="joiningDate"><br><br>
+
+    <label>Total Fees:</label><br>
+    <input type="text" id="totalFees" placeholder="Enter the Fees Amount"><br><br></div>
+
+    <button class="btn-add" onclick="addStudent()">Add Student</button>
+
+    <table id="studentTable">
+        <thead>
+            <tr>
+                <th>Sl No.</th>
+                <th>Name</th>
+                <th>Courses</th>
+                <th>Mobile Number</th>
+                <th>Joining Date</th>
+                <th>Total Fees</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <button class="btn-export" onclick="exportToExcel()">Download Excel</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
